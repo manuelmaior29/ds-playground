@@ -1,53 +1,35 @@
 import torch
 import torch.nn as nn
+from torch import cuda
 
 class RNN(nn.Module):
     """
     Basic RNN block. This represents a single layer of RNN
     """
-    def __init__(self, input_size: int, hidden_size: int, output_size: int, batch_size: int) -> None:
+    def __init__(self, input_size: int, hidden_size: int, num_layers: int, num_classes: int) -> None:
         """
         Args:
             input_size (int): Number of features for the input vector
             hidden_size (int): Number of hidden neurons
-            output_size (int): Number of features for the output vector
-            batch_size (int): Size of a batch
+            num_layers (int):
+            num_classes (int):
         """
-        super().__init__()
-        self.input_size = input_size
+        super(RNN, self).__init__()
         self.hidden_size = hidden_size
-        self.output_size = output_size
-        self.batch_size = batch_size
-        
-        self.i2h = nn.Linear(input_size, hidden_size, bias=False)
-        self.h2h = nn.Linear(hidden_size, hidden_size)
-        self.h2o = nn.Linear(hidden_size, output_size)
+        self.num_layers = num_layers
+        self.rnn = nn.RNN(input_size, hidden_size, num_layers, batch_first=True)
+        self.fc = nn.Linear(hidden_size*28, num_classes) # need to parametrize 28=sequence length
 
-    def forward(self, x, hidden_state) -> tuple[torch.Tensor, torch.Tensor]:
+        
+    def forward(self, x):
         """
         Args:
             x: Input vector
-            hidden_state: Previous hidden state
         Returns:
-            tuple[torch.Tensor, torch.Tensor]: (Linear output (without activation), New hidden state matrix)
+
         """
-        x = self.i2h(x)
-        hidden_state = self.h2h(hidden_state)
-        hidden_state = torch.tahn(x + hidden_state)
-        out = self.h2o*(hidden_state)
-        return out, hidden_state
-
-    def init_zero_hidden(self, batch_size=1) -> torch.Tensor:
-        """
-        Args:
-            batch_size (int, optional): Batch size for a zero-initialized hidden state. Defaults to 1.
-
-        Returns:
-            torch.Tensor: A hidden state with specified batch size
-        """
-        return torch.zeros(batch_size, self.hidden_size, requires_grad=False)
-
-
-
-
-
+        h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(device = "cuda:0" if cuda.is_available() else "cpu")
+        out, _ = self.rnn(x, h0)
+        out = out.reshape(out.shape[0], -1)
+        out = self.fc(out)
+        return out
