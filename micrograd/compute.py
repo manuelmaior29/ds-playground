@@ -47,6 +47,9 @@ class Value:
     def __truediv__(self, other):
         return self * other**-1
     
+    def __rtruediv__(self, other):
+        return other * self**-1
+    
     def tanh(self):
         x = self.data
         t = (math.exp(2*x) - 1) / (math.exp(2*x) + 1)
