@@ -15,7 +15,12 @@ def find_closest_centroids(X, centroids):
     return idx
 
 def compute_centroids(X, idx, K):
-    pass
+    m, n = X.shape
+    centroids = np.zeros((K, n))
+    for k in range(K):
+        indices = np.where(idx == k)
+        centroids[k, :] = np.mean(X[indices], axis=0)
+    return centroids
 
 def k_means_initialize_centroids(X: np.ndarray, K: int):
     centroids = []
