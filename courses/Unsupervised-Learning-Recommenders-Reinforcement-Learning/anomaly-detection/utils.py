@@ -1,7 +1,8 @@
+import math
 import numpy as np
 import pickle
 
-def load_data():
+def load_data_train():
     """
     Load dummy dataset for testing ([throughput (mb/s), latency (ms)])
     """
@@ -9,16 +10,16 @@ def load_data():
         X = pickle.load(f)
         return X
 
-def load_example_val():
+def load_data_val():
     """
-    Load dummy validation preds/gts
+    Load dummy validation dataset for testing ([throughput (mb/s), latency (ms)])
     """
-    y_val, p_val = None, None
+    X_val, y_val = None, None
+    with open('data_val.pkl', 'rb') as f:
+        X_val = pickle.load(f)
     with open('y_val.pkl', 'rb') as f:
         y_val = pickle.load(f)
-    with open('p_val.pkl', 'rb') as f:
-        p_val = pickle.load(f)
-    return np.array(y_val), np.array(p_val)
+    return np.array(X_val), np.array(y_val)
 
 def estimate_gaussian(X):
     """
@@ -75,3 +76,11 @@ def select_threshold(y_val, p_val):
             best_F1 = F1
             best_epsilon = epsilon
     return best_epsilon, best_F1
+
+def multivariate_gaussian(X, mu, var):
+    p = np.ones((X.shape[0],), dtype=np.float_)
+    for idx, x in enumerate(X):
+        temp = np.exp(-(np.power((x-mu), 2))/(2*(np.power(var, 2)))/(np.sqrt(2*np.pi*(np.power(var, 2)))))
+        p[idx] = np.prod(temp)
+    return p    
+
