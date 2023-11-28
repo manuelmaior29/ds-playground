@@ -1,5 +1,27 @@
 import numpy as np
 import tensorflow as tf
+import pandas as pd
+
+def load_ratings_small(path):
+    """
+      Args:
+        path (str): path to the folder where the MovieLens (small) is located
+      Returns:
+        Y (ndarray (num_movies,num_users)): matrix of user ratings of movies
+        R (ndarray (num_movies,num_users)): matrix, where R(i, j) = 1 if the i-th movies was rated by the j-th user
+    """
+    ratings_df = pd.read_csv(path + '/ratings.csv')
+    movies_df = pd.read_csv(path + '/movies.csv')
+    nm, nu = movies_df['movieId'].nunique(), ratings_df['userId'].nunique()
+    Y = np.zeros(shape=(nm, nu), dtype=np.float32)
+    R = np.zeros(shape=(nm, nu), dtype=np.float32)
+    user_ids = ratings_df['userId'].unique()
+    for user_id in user_ids:
+        movie_ids = ratings_df[ratings_df['userId'] == user_id]['movieId']
+        for movie_id in movie_ids:
+            Y[movie_id - 1][user_id - 1] = ratings_df[(ratings_df['movieId'] == movie_id) & (ratings_df['userId'] == user_id)]['rating'].values[0]
+            R[movie_id - 1][user_id - 1] = 1
+    return Y, R
 
 def cofi_cost_func(X, W, b, Y, R, lambda_):
     """
