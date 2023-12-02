@@ -3,7 +3,7 @@ import tensorflow as tf
 import pandas as pd
 import tqdm
 
-def load_precalc_params(Y_df, num_features):
+def load_precalc_params(Y, num_features):
     """
     Args:
       Y_df (pandas.DataFrame): movie ratings (movieId, movie ratings for userIds)
@@ -14,7 +14,7 @@ def load_precalc_params(Y_df, num_features):
       num_movies (int)                    : number of movies
       num_users (int)                     : number of users
     """
-    num_movies, num_users = Y_df.shape
+    num_movies, num_users = Y.shape
     X = np.random.rand(num_movies, num_features)
     W = np.random.rand(num_users, num_features)
     b = np.random.rand(1, num_users)
@@ -29,15 +29,15 @@ def load_ratings_small(path, count=1000):
         R_df (pandas.DataFrame): rating flags (movieId, movie rating flags for userIds)
          """
     ratings_df = pd.read_csv(path + '/ratings.csv')[:count]
-    movies_df = pd.read_csv(path + '/movies.csv')
+    movies_df = pd.read_csv(path + '/movies.csv').drop_duplicates('movieId')
     user_ids = ratings_df['userId'].unique().tolist()
-    columns = ['movieId'] + user_ids
+    columns = ['movieId', 'title'] + user_ids
     Y_df = pd.DataFrame(columns=columns, data=np.zeros((movies_df.shape[0], len(columns))))
     R_df = pd.DataFrame(columns=columns, data=np.zeros((movies_df.shape[0], len(columns))))
-    Y_df['movieId'], R_df['movieId'] = movies_df['movieId'], movies_df['movieId']
+    Y_df[['movieId', 'title']], R_df[['movieId', 'title']] = movies_df[['movieId', 'title']], movies_df[['movieId', 'title']]
     for row in tqdm.tqdm(ratings_df.itertuples()):
-        Y_df.loc[row.movieId, row.userId] = row.rating
-        R_df.loc[row.movieId, row.userId] = 1
+        Y_df.loc[Y_df['movieId'] == row.movieId, row.userId] = row.rating
+        R_df.loc[R_df['movieId'] == row.movieId, row.userId] = 1
     return Y_df, R_df
 
 def cofi_cost_func(X, W, b, Y, R, lambda_):
@@ -84,3 +84,22 @@ def cofi_cost_func_v(X, W, b, Y, R, lambda_):
     j = (tf.linalg.matmul(X, tf.transpose(W)) + b - Y)*R
     J = 0.5 * tf.reduce_sum(j**2) + (lambda_/2) * (tf.reduce_sum(X**2) + tf.reduce_sum(W**2))
     return J
+
+def normalize_ratings(Y, R):
+    """
+    Preprocess data by subtracting mean rating for every movie (every row).
+    Args:
+      Y (ndarray (num_movies, num_users)): matrix of user ratings of movies
+      R (ndarray (num_movies, num_users)): matrix, where R(i, j) = 1 if the i-th movies was rated by the j-th user
+    Returns:
+      Ynorm (ndarray (num_movies, num_users)): matrix of normalized user ratings of movies
+      Ymean (ndarray (num_movies, 1)): vector of mean rating for movies
+    """
+    m, n = Y.shape
+    Ymean = np.zeros((m, 1))
+    Ynorm = np.zeros(Y.shape)
+    for i in range(m):
+        idx = np.where(R[i, :] == 1)
+        Ymean[i] = np.mean(Y[i, idx])
+        Ynorm[i, idx] = Y[i, idx] - Ymean[i]
+    return Ynorm, Ymean
