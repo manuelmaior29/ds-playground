@@ -1,4 +1,4 @@
-# learning-ml
+## ml
 The purpose of this repository is to serve as a space for learning and exercising machine learning concepts, algorithms and practical problems. Most of the code is written in Python.
 
 ## Description
