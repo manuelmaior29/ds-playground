@@ -47,10 +47,28 @@ class LSTMbyHand(L.LightningModule):
         return ([updated_long_memory, updated_short_memory])
 
     def forward(self, input):
-        pass
+        long_memory = 0
+        short_memory = 0
+        day1 = input[0]
+        day2 = input[1]
+        day3 = input[2]
+        day4 = input[3]
+        long_memory, short_memory = self.lstm_unit(day1, long_memory, short_memory)
+        long_memory, short_memory = self.lstm_unit(day2, long_memory, short_memory)
+        long_memory, short_memory = self.lstm_unit(day3, long_memory, short_memory)
+        long_memory, short_memory = self.lstm_unit(day4, long_memory, short_memory)
+        return short_memory
 
     def configure_optimizers(self):
-        pass
+        return Adam(params=self.parameters())
 
     def training_step(self, batch, batch_idx):
-        pass
+        input_i, label_i = batch
+        output_i = self.forward(input_i[0])
+        loss = (output_i - label_i)**2
+        self.log('train_loss', loss)
+        if (label_i == 0):
+            self.log('out_0', output_i)
+        else:
+            self.log('out_1', output_i)
+        return loss
