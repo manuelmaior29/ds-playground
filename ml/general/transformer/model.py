@@ -19,6 +19,9 @@ class SelfAttention(nn.Module):
         values = values.reshape(N, value_len, self.heads, self.head_dim)
         keys = keys.reshape(N, key_len, self.heads, self.head_dim)
         queries = queries.reshape(N, query_len, self.heads, self.head_dim)
+        values = self.values(values)
+        keys = self.keys(keys)
+        queries = self.queries(queries)
         energy = torch.einsum('nqhd,nkhd->nhqk', [queries, keys])
         if mask is not None:
             energy = energy.masked_fill(mask == 0, float('-1e20'))
@@ -62,7 +65,7 @@ class Encoder(nn.Module):
                     dropout=dropout,
                     forward_expansion=forward_expansion
                 )
-            ]
+            for _ in range(num_layers)]
         )
         self.dropout = nn.Dropout(dropout)
 
