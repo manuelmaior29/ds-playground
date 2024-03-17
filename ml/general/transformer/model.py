@@ -118,3 +118,16 @@ class Transformer(nn.Module):
         self.decoder = Decoder(tgt_vocab_size, embed_size, num_layers, heads, forward_expansion, dropout, device, max_length)
         self.src_pad_idx = src_pad_idx
         self.tgt_pad_idx = tgt_pad_idx
+
+    def _make_src_mask(self, src):
+        return (src != self.src_pad_idx).unsqueeze(1).unsqueeze(2).to(self.device)
+    
+    def _make_tgt_mask(self, tgt):
+        return (torch.tril())
+    
+    def forward(self, src, tgt):
+        src_mask = self._make_src_mask(src)
+        tgt_mask = self._make_tgt_mask(tgt)
+        enc_src = self.encoder(src, src_mask)
+        out = self.decoder(tgt, enc_src, src_mask, tgt_mask)
+        return out
