@@ -73,3 +73,48 @@ class Encoder(nn.Module):
         for layer in self.layers:
             out = layer(out, out, out, mask)
         return out
+    
+class DecoderBlock(nn.Module):
+    def __init__(self, embed_size, heads, forward_expansion, dropout, device):
+        super(DecoderBlock, self).__init__()
+        self.attention = SelfAttention(embed_size, heads)
+        self.norm = nn.LayerNorm(embed_size)
+        self.transformer_block = TransformerBlock(
+            embed_size, heads, dropout, forward_expansion
+        )
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x, value, key, src_mask, tgt_mask):
+        attention = self.attention(x, x, x, tgt_mask)
+        query = self.dropout(self.norm(attention + x))
+        out = self.transformer_block(value, key, query, src_mask)
+        return out
+    
+class Decoder(nn.Module):
+    def __init__(self, vocab_size, embed_size, num_layers, heads, forward_expansion, dropout, device, max_length):
+        super(Decoder, self).__init__()
+        self.device = device
+        self.word_embedding = nn.Embedding(vocab_size, embed_size)
+        self.position_embedding = nn.Embedding(max_length, embed_size)
+        self.layers = nn.ModuleList(
+            [DecoderBlock(embed_size, heads, forward_expansion, dropout, device) for _ in range(num_layers)]
+        )
+        self.fc_out = nn.Linear(embed_size, vocab_size)
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x, enc_out, src_mask, tgt_mask):
+        N, seq_length = x.shape
+        positions = torch.arange(0, seq_length).expand(N, seq_length).to(self.device)
+        x = self.dropout((self.word_embedding(x) + self.position_embedding(positions)))
+        for layer in self.layers:
+            x = layer(x, enc_out, enc_out, src_mask, tgt_mask)
+        out = self.fc_out(x)
+        return out
+    
+class Transformer(nn.Module):
+    def __init__(self, src_vocab_size, tgt_vocab_size, src_pad_idx, tgt_pad_idx, embed_size=256, num_layers=6, forward_expansion=4, heads=8, dropout=0, device='cuda', max_length=100):
+        super(Transformer, self).__init__()
+        self.encoder = Encoder(src_vocab_size, embed_size, num_layers, heads, device, forward_expansion, dropout, max_length)
+        self.decoder = Decoder(tgt_vocab_size, embed_size, num_layers, heads, forward_expansion, dropout, device, max_length)
+        self.src_pad_idx = src_pad_idx
+        self.tgt_pad_idx = tgt_pad_idx
