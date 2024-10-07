@@ -1,22 +1,31 @@
-import os
-import torch
-from torch import optim, nn, utils, Tensor
-from torchvision.transforms import ToTensor
+from torch import optim
+from torch.nn import Linear
+from transformers import BertTokenizer, BertModel, TrainingArguments
 import lightning as L
-import torch.nn.utils.rnn as rnn_utils
+from torch.nn.functional import cross_entropy
+import torch
 
+device = torch.device("mps:0" if torch.backends.mps.is_available() else "cpu")
 class EmailClassifier(L.LightningModule):
-    def __init__(self, input_size, hidden_size, num_layers):
+    def __init__(self, config):
         super().__init__()
-        self.input_size = input_size
-        self.gru = nn.GRU(input_size=input_size, hidden_size=hidden_size, num_layers=num_layers, batch_first=True)
-        self.fcn = nn.Sequential([nn.Linear(768, 1024),
-                                  nn.ReLU(),
-                                  nn.BatchNorm1d(),
-                                  nn.Dropout(p=0.25)])
+        training_args = TrainingArguments(use_mps_device=True, output_dir="test_trainer")
+        self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+        self.bert = BertModel.from_pretrained('bert-base-uncased', 
+                                                                  config=config).to(device)
+        self.fc = Linear(in_features=self.bert.config.hidden_size, out_features=2, device=device)
         
     def training_step(self, batch, batch_idx):
-        pass
+        x, y = batch
+        x_tokenized = self.tokenizer(x, return_tensors='pt', max_length=512, padding='max_length', truncation=True)
+        x_tokenized_input_ids = x_tokenized['input_ids'].to(device)
+        x_tokenized_attention_mask = x_tokenized['attention_mask'].to(device)
+        z = self.bert(input_ids=x_tokenized_input_ids,
+                          attention_mask=x_tokenized_attention_mask)
+        z = z.pooler_output
+        y_hat = self.fc(z)
+        loss = cross_entropy(input=y_hat, target=y)
+        self.log("loss", loss, prog_bar=True, logger=True, on_step=True, on_epoch=True)
 
     def configure_optimizers(self):
         optimizer = optim.Adam(self.parameters(), lr=1e-3)
