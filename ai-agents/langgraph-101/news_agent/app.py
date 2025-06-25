@@ -9,7 +9,8 @@ from langchain_community.tools import DuckDuckGoSearchRun
 from tools import weather_info_tool
 
 # LLM definition
-llm = Ollama(model="qwen2.5:14b")  # Check spelling of model name on your local Ollama
+# TODO: Make LLM aware of existing tools
+llm = Ollama(model="qwen2.5:14b") 
 
 # Tool list definition
 search_tool = DuckDuckGoSearchRun()
