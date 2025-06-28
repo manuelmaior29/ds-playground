@@ -9,57 +9,92 @@ from langchain_community.tools import (
     DuckDuckGoSearchRun
 )
 
-from tools import (
-    search_wikipedia_tool,
-    text_unreverser_tool
+from utils import (
+    get_question
 )
-
-tools = [
-    search_wikipedia_tool,
-    text_unreverser_tool,
-    DuckDuckGoSearchRun()
-]
-llm = ChatOllama(model="qwen3:8b", verbose=True)
-llm_with_tools = llm.bind_tools(tools)
+from tools import (
+    search_wikipedia,
+    get_unreversed_text
+)
 
 class AgentState(TypedDict):
     messages: Annotated[List[AnyMessage], add_messages]
+
+def build_graph():
+    system_prompt = ""
+    try:
+        with open("system_prompt.txt", "r") as f:
+            system_prompt = f.read()
+    except FileNotFoundError:
+        print("\u26A0️  system_prompt.txt not found. Using default system prompt.")
+
+    def call_model(state: AgentState) -> dict:
+        """
+        Invokes the LLM with the current messages and returns its response.
+        """
+        messages = state["messages"]
+        sys_msg = SystemMessage(content=system_prompt)
+        response = llm_with_tools.invoke([sys_msg] + messages)
+        return {"messages": [response]}
     
-# Nodes
-def call_model(state: AgentState) -> dict:
-    """
-    Invokes the LLM with the current messages and returns its response.
-    """
-    messages = state["messages"]
-    sys_msg = SystemMessage(content=f"""You are a helpful assistant that answers to questions directly.
-                            Use any tool available to you to answer the question, but only if it makes sense. 
-                            If you cannot answer the question, answer with "I don't know".""")
-    response = llm_with_tools.invoke([sys_msg] + messages)
-    return {"messages": [response]}
+    tools = [
+        search_wikipedia,
+        get_unreversed_text,
+        DuckDuckGoSearchRun()
+    ]
+    
+    llm = ChatOllama(model="qwen3:8b", verbose=True)
+    llm_with_tools = llm.bind_tools(tools)
 
-# Graph
-workflow = StateGraph(state_schema=AgentState)
-workflow.add_node("call_model", call_model)
-workflow.add_node("tools", ToolNode(tools))
-workflow.set_entry_point("call_model")
-workflow.add_conditional_edges(
-    "call_model",
-    tools_condition
-)
-workflow.add_edge("tools", "call_model")
-agent = workflow.compile()
+    graph = StateGraph(state_schema=AgentState)
+    graph.add_node("call_model", call_model)
+    graph.add_node("tools", ToolNode(tools))
+    graph.set_entry_point("call_model")
+    graph.add_conditional_edges(
+        "call_model",
+        tools_condition
+    )
+    graph.add_edge("tools", "call_model")
+    agent = graph.compile()
+    return agent
 
-if __name__ == "__main__":
+class BasicAgent:
+    def __init__(self):
+        self.graph = build_graph()
+
+    def __call__(self, question: str, verbose: bool = False) -> dict:
+        print(f"Agent received question (first 50 chars): {question}...")
+        messages = [HumanMessage(content=question)]
+        messages = self.graph.invoke({"messages": messages})
+        if verbose:
+            for message in messages['messages']:
+                message.pretty_print()
+        answer = messages['messages'][-1].content
+        return answer[14:]
+
+if __name__ == "__main__": 
+    tools = [
+        search_wikipedia,
+        get_unreversed_text,
+        DuckDuckGoSearchRun()
+    ]
+    
+    llm = ChatOllama(model="qwen3:8b", verbose=True)
+    llm_with_tools = llm.bind_tools(tools)
+
+    try:
+        system_prompt = ""
+        with open("system_prompt.txt", "r") as f:
+            system_prompt = f.read()
+    except FileNotFoundError:
+        print("\u26A0️  system_prompt.txt not found. Using default system prompt.")
+    
+    agent = BasicAgent()
     print("Agent started. Type 'exit' to quit.")
     while True:
 
         user_input = input("================================== You ==================================\n")
         if user_input.lower() == 'exit':
             break
-        inputs = {"messages": [HumanMessage(content=user_input)]}
         
-        response = agent.invoke(input=inputs)
-        # Print the steps
-        for message in response["messages"]:
-            if not isinstance(message, HumanMessage):
-                message.pretty_print()
+        response = agent(question=user_input, verbose=True)
