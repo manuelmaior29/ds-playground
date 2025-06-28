@@ -1,0 +1,501 @@
+Item_ID,Item_Name,Item_Description,Price,Weight (g),Category
+1,Zucchini,Premium zucchini hand-picked.,15.46,2483,Vegetables
+2,Muffin,Premium muffin no added sugar.,13.04,2196,Bakery
+3,Carrot,Organic carrot no added sugar.,5.4,208,Vegetables
+4,Granola Bar,Imported granola bar hand-picked.,11.04,2328,Snacks
+5,Orange,Delicious orange packed with nutrients.,3.75,664,Fruits
+6,Lamb Chops,Locally sourced lamb chops packed with nutrients.,3.65,1419,Meat
+7,Fruit Snacks,Low-fat fruit snacks from local farms.,5.39,1453,Snacks
+8,Cottage Cheese,Delicious cottage cheese packed with nutrients.,10.87,1948,Dairy
+9,Pear,Imported pear with natural ingredients.,8.72,1193,Fruits
+10,Cucumber,Organic cucumber with natural ingredients.,6.59,181,Vegetables
+11,Flour,Low-fat flour from local farms.,1.73,1050,Pantry
+12,Mineral Water,Low-fat mineral water packed with nutrients.,9.17,2585,Beverages
+13,Onion,Low-fat onion with natural ingredients.,2.45,1659,Vegetables
+14,Pretzels,Organic pretzels with natural ingredients.,0.91,1017,Snacks
+15,Roll,Fresh roll with natural ingredients.,17.19,1316,Bakery
+16,Turkey,Premium turkey packed with nutrients.,7.58,2272,Meat
+17,Carrot,Organic carrot no added sugar.,8.71,2412,Vegetables
+18,Baguette,Gluten-free baguette no added sugar.,5.94,1516,Bakery
+19,Cereal,Locally sourced cereal hand-picked.,17.9,2529,Pantry
+20,Green Tea,Organic green tea from local farms.,9.01,1884,Beverages
+21,Bagel,Organic bagel no added sugar.,5.21,2408,Bakery
+22,Salt,Organic salt packed with nutrients.,10.89,563,Pantry
+23,Sausage,Low-fat sausage with natural ingredients.,9.33,1597,Meat
+24,Turkey,Locally sourced turkey hand-picked.,2.5,1289,Meat
+25,Cottage Cheese,Fresh cottage cheese hand-picked.,18.26,686,Dairy
+26,Pork Chops,Delicious pork chops hand-picked.,10.32,2944,Meat
+27,Orange Juice,Low-fat orange juice hand-picked.,8.58,2794,Beverages
+28,Frozen Berries,Locally sourced frozen berries no added sugar.,17.85,2211,Frozen
+29,Cheese,Premium cheese from local farms.,17.8,1291,Dairy
+30,Cream,Delicious cream with natural ingredients.,1.77,1365,Dairy
+31,Sardines,Fresh sardines packed with nutrients.,14.87,692,Seafood
+32,Lettuce,Low-fat lettuce with natural ingredients.,8.46,367,Vegetables
+33,Frozen Corn,Imported frozen corn with natural ingredients.,4.7,428,Frozen
+34,Beef Steak,Gluten-free beef steak hand-picked.,8.86,1083,Meat
+35,Sour Cream,Organic sour cream from local farms.,5.95,1952,Dairy
+36,Cod,Premium cod no added sugar.,7.1,1664,Seafood
+37,Frozen Fries,Sugar-free frozen fries from local farms.,17.22,2406,Frozen
+38,Frozen Fries,Low-fat frozen fries hand-picked.,4.76,282,Frozen
+39,Sausage,Premium sausage packed with nutrients.,2.85,2554,Meat
+40,Apple,Locally sourced apple with natural ingredients.,12.78,2654,Fruits
+41,Donut,Low-fat donut packed with nutrients.,12.23,1330,Bakery
+42,Rice,Low-fat rice hand-picked.,1.24,2736,Pantry
+43,Spices,Delicious spices hand-picked.,14.53,1779,Pantry
+44,Pretzels,Low-fat pretzels packed with nutrients.,15.26,1133,Snacks
+45,Frozen Corn,Organic frozen corn hand-picked.,1.01,389,Frozen
+46,Yogurt,Low-fat yogurt with natural ingredients.,1.08,880,Dairy
+47,Lettuce,Organic lettuce from local farms.,12.8,1861,Vegetables
+48,Ham,Premium ham hand-picked.,11.04,1345,Meat
+49,Frozen Nuggets,Sugar-free frozen nuggets no added sugar.,10.19,621,Frozen
+50,Orange Juice,Fresh orange juice from local farms.,19.01,2167,Beverages
+51,Orange Juice,Gluten-free orange juice packed with nutrients.,2.53,2908,Beverages
+52,Yogurt,Organic yogurt packed with nutrients.,6.04,2713,Dairy
+53,Tuna,Imported tuna no added sugar.,6.41,1011,Seafood
+54,Spices,Locally sourced spices from local farms.,19.58,1074,Pantry
+55,Pear,Organic pear no added sugar.,13.88,2413,Fruits
+56,Soda,Imported soda hand-picked.,12.51,1548,Beverages
+57,Cod,Delicious cod with natural ingredients.,14.39,871,Seafood
+58,Cream,Sugar-free cream packed with nutrients.,8.94,2705,Dairy
+59,Kiwi,Sugar-free kiwi from local farms.,15.01,1377,Fruits
+60,Turkey,Sugar-free turkey from local farms.,6.55,2198,Meat
+61,Cod,Fresh cod from local farms.,17.91,1317,Seafood
+62,Cod,Sugar-free cod packed with nutrients.,19.03,2688,Seafood
+63,Spices,Gluten-free spices packed with nutrients.,15.33,771,Pantry
+64,Croissant,Delicious croissant packed with nutrients.,13.18,1838,Bakery
+65,Mussels,Locally sourced mussels with natural ingredients.,6.42,2961,Seafood
+66,Greek Yogurt,Organic greek yogurt hand-picked.,9.14,2447,Dairy
+67,Cheese,Low-fat cheese packed with nutrients.,19.06,1420,Dairy
+68,Frozen Nuggets,Locally sourced frozen nuggets packed with nutrients.,3.43,1102,Frozen
+69,Pepper,Premium pepper hand-picked.,7.14,1889,Vegetables
+70,Lobster,Premium lobster no added sugar.,15.63,2905,Seafood
+71,Lemonade,Organic lemonade from local farms.,16.13,1356,Beverages
+72,Butter,Premium butter with natural ingredients.,8.77,1882,Dairy
+73,Donut,Organic donut hand-picked.,5.01,446,Bakery
+74,Lactose-Free Milk,Low-fat lactose-free milk from local farms.,11.46,902,Dairy
+75,Frozen Corn,Imported frozen corn from local farms.,1.84,1841,Frozen
+76,Crackers,Locally sourced crackers from local farms.,13.74,277,Snacks
+77,Ham,Delicious ham with natural ingredients.,11.44,2983,Meat
+78,Kiwi,Gluten-free kiwi hand-picked.,4.97,561,Fruits
+79,Mango,Locally sourced mango no added sugar.,3.7,884,Fruits
+80,Spinach,Organic spinach with natural ingredients.,6.69,827,Vegetables
+81,Bacon,Fresh bacon with natural ingredients.,3.97,2388,Meat
+82,Sugar,Delicious sugar with natural ingredients.,10.17,1051,Pantry
+83,Ground Beef,Low-fat ground beef with natural ingredients.,7.54,2242,Meat
+84,Spinach,Delicious spinach packed with nutrients.,1.42,2178,Vegetables
+85,Ice Cream,Premium ice cream with natural ingredients.,9.72,339,Frozen
+86,Greek Yogurt,Low-fat greek yogurt no added sugar.,16.93,858,Dairy
+87,Green Tea,Sugar-free green tea with natural ingredients.,5.77,2995,Beverages
+88,Vinegar,Low-fat vinegar from local farms.,3.64,2579,Pantry
+89,Lettuce,Fresh lettuce hand-picked.,8.6,2121,Vegetables
+90,Cheese,Low-fat cheese with natural ingredients.,14.7,112,Dairy
+91,Pear,Sugar-free pear from local farms.,3.85,1423,Fruits
+92,Lobster,Delicious lobster packed with nutrients.,19.5,2469,Seafood
+93,Lettuce,Low-fat lettuce from local farms.,14.21,2989,Vegetables
+94,Roll,Organic roll with natural ingredients.,15.01,779,Bakery
+95,Ice Cream,Delicious ice cream from local farms.,4.6,2563,Frozen
+96,Sausage,Fresh sausage with natural ingredients.,3.09,351,Meat
+97,Zucchini,Delicious zucchini no added sugar.,13.49,2202,Vegetables
+98,Popcorn,Imported popcorn packed with nutrients.,13.89,1624,Snacks
+99,Greek Yogurt,Imported greek yogurt no added sugar.,5.86,1626,Dairy
+100,Ham,Fresh ham no added sugar.,3.42,1850,Meat
+101,Frozen Fries,Locally sourced frozen fries no added sugar.,8.73,2182,Frozen
+102,Butter,Gluten-free butter from local farms.,4.05,1653,Dairy
+103,Croissant,Fresh croissant packed with nutrients.,19.72,1807,Bakery
+104,Ice Cream,Low-fat ice cream no added sugar.,8.34,1429,Frozen
+105,Orange Juice,Locally sourced orange juice with natural ingredients.,6.41,1537,Beverages
+106,Turkey,Delicious turkey from local farms.,2.35,1425,Meat
+107,Bun,Low-fat bun packed with nutrients.,11.72,1331,Bakery
+108,Croissant,Locally sourced croissant hand-picked.,2.88,116,Bakery
+109,Bacon,Organic bacon with natural ingredients.,12.04,132,Meat
+110,Bacon,Organic bacon from local farms.,5.14,1318,Meat
+111,Ham,Organic ham with natural ingredients.,9.94,1974,Meat
+112,Popcorn,Delicious popcorn packed with nutrients.,8.12,2642,Snacks
+113,Grapes,Low-fat grapes no added sugar.,4.37,1044,Fruits
+114,Ham,Imported ham no added sugar.,0.88,2224,Meat
+115,Spices,Delicious spices from local farms.,6.15,2036,Pantry
+116,Pasta,Fresh pasta from local farms.,17.8,1971,Pantry
+117,Cottage Cheese,Organic cottage cheese with natural ingredients.,3.26,2069,Dairy
+118,Frozen Pizza,Imported frozen pizza no added sugar.,10.63,2606,Frozen
+119,Cod,Delicious cod from local farms.,9.84,1883,Seafood
+120,Frozen Nuggets,Fresh frozen nuggets with natural ingredients.,8.67,2549,Frozen
+121,Kiwi,Fresh kiwi from local farms.,16.02,1658,Fruits
+122,Smoothie,Fresh smoothie no added sugar.,17.96,2381,Beverages
+123,Pretzels,Premium pretzels from local farms.,14.99,2312,Snacks
+124,Mineral Water,Organic mineral water no added sugar.,3.5,2637,Beverages
+125,Cod,Sugar-free cod packed with nutrients.,8.66,2958,Seafood
+126,Grapes,Sugar-free grapes packed with nutrients.,6.98,457,Fruits
+127,Pasta,Imported pasta from local farms.,16.71,1315,Pantry
+128,Frozen Nuggets,Locally sourced frozen nuggets hand-picked.,3.85,1443,Frozen
+129,Orange,Organic orange from local farms.,10.34,156,Fruits
+130,Salmon,Low-fat salmon no added sugar.,12.03,1949,Seafood
+131,Frozen Pizza,Low-fat frozen pizza no added sugar.,10.2,2456,Frozen
+132,Lobster,Sugar-free lobster hand-picked.,18.59,2661,Seafood
+133,Frozen Peas,Imported frozen peas with natural ingredients.,5.94,937,Frozen
+134,Watermelon,Locally sourced watermelon packed with nutrients.,17.55,447,Fruits
+135,Mineral Water,Organic mineral water from local farms.,14.78,2129,Beverages
+136,Milk,Imported milk packed with nutrients.,18.99,1994,Dairy
+137,Sausage,Locally sourced sausage hand-picked.,13.2,2044,Meat
+138,Iced Tea,Locally sourced iced tea no added sugar.,17.31,106,Beverages
+139,Pepper,Imported pepper with natural ingredients.,16.61,1613,Vegetables
+140,Flour,Gluten-free flour packed with nutrients.,10.29,849,Pantry
+141,Iced Tea,Fresh iced tea with natural ingredients.,1.14,2242,Beverages
+142,Chips,Locally sourced chips packed with nutrients.,16.78,1093,Snacks
+143,Frozen Fries,Locally sourced frozen fries no added sugar.,11.98,1359,Frozen
+144,Pie,Premium pie with natural ingredients.,15.25,1768,Bakery
+145,Croissant,Imported croissant with natural ingredients.,19.43,657,Bakery
+146,Cream,Organic cream hand-picked.,18.81,1607,Dairy
+147,Ice Cream,Organic ice cream from local farms.,15.39,459,Frozen
+148,Energy Drink,Locally sourced energy drink hand-picked.,19.53,952,Beverages
+149,Granola Bar,Imported granola bar from local farms.,16.51,2168,Snacks
+150,Kiwi,Imported kiwi with natural ingredients.,15.38,1570,Fruits
+151,Strawberry,Sugar-free strawberry from local farms.,3.61,589,Fruits
+152,Salmon,Premium salmon packed with nutrients.,7.93,2246,Seafood
+153,Cottage Cheese,Sugar-free cottage cheese with natural ingredients.,0.62,1292,Dairy
+154,Smoothie,Gluten-free smoothie packed with nutrients.,5.86,2903,Beverages
+155,Nuts,Low-fat nuts no added sugar.,2.61,1883,Snacks
+156,Tomato,Delicious tomato from local farms.,5.28,900,Vegetables
+157,Strawberry,Premium strawberry with natural ingredients.,10.89,1789,Fruits
+158,Popcorn,Fresh popcorn packed with nutrients.,4.8,2232,Snacks
+159,Pasta,Sugar-free pasta packed with nutrients.,16.69,2267,Pantry
+160,Muffin,Imported muffin from local farms.,10.06,449,Bakery
+161,Lemonade,Imported lemonade with natural ingredients.,3.4,2908,Beverages
+162,Soda,Delicious soda with natural ingredients.,7.03,2296,Beverages
+163,Pretzels,Premium pretzels hand-picked.,8.68,1711,Snacks
+164,Kiwi,Imported kiwi packed with nutrients.,0.93,1983,Fruits
+165,Onion,Premium onion from local farms.,10.87,792,Vegetables
+166,Rice,Sugar-free rice no added sugar.,13.82,374,Pantry
+167,Cereal,Delicious cereal no added sugar.,4.27,126,Pantry
+168,Ham,Imported ham packed with nutrients.,9.47,1801,Meat
+169,Lamb Chops,Imported lamb chops no added sugar.,1.51,2566,Meat
+170,Chicken Breast,Delicious chicken breast from local farms.,16.37,2098,Meat
+171,Broccoli,Low-fat broccoli packed with nutrients.,12.62,1953,Vegetables
+172,Smoothie,Organic smoothie hand-picked.,1.27,437,Beverages
+173,Banana,Imported banana no added sugar.,16.89,2040,Fruits
+174,Orange Juice,Fresh orange juice hand-picked.,14.32,1687,Beverages
+175,Pork Chops,Locally sourced pork chops packed with nutrients.,8.23,879,Meat
+176,Lamb Chops,Imported lamb chops no added sugar.,5.05,967,Meat
+177,Cucumber,Fresh cucumber no added sugar.,14.6,550,Vegetables
+178,Ground Beef,Low-fat ground beef with natural ingredients.,10.34,2500,Meat
+179,Beef Steak,Premium beef steak from local farms.,12.62,375,Meat
+180,Sugar,Organic sugar with natural ingredients.,8.23,2984,Pantry
+181,Flour,Gluten-free flour packed with nutrients.,1.79,294,Pantry
+182,Baguette,Fresh baguette with natural ingredients.,13.01,1572,Bakery
+183,Rice,Sugar-free rice no added sugar.,6.98,2045,Pantry
+184,Granola Bar,Locally sourced granola bar packed with nutrients.,4.95,790,Snacks
+185,Crackers,Imported crackers with natural ingredients.,3.3,2591,Snacks
+186,Crackers,Low-fat crackers from local farms.,14.38,802,Snacks
+187,Banana,Delicious banana with natural ingredients.,8.46,2556,Fruits
+188,Mango,Gluten-free mango packed with nutrients.,14.1,2428,Fruits
+189,Octopus,Imported octopus packed with nutrients.,1.3,1396,Seafood
+190,Octopus,Premium octopus hand-picked.,3.53,2686,Seafood
+191,Ground Beef,Imported ground beef packed with nutrients.,8.81,2768,Meat
+192,Cod,Sugar-free cod with natural ingredients.,5.43,633,Seafood
+193,Onion,Imported onion no added sugar.,19.24,1848,Vegetables
+194,Trail Mix,Gluten-free trail mix from local farms.,9.37,289,Snacks
+195,Pineapple,Organic pineapple no added sugar.,2.53,1166,Fruits
+196,Apple,Imported apple from local farms.,10.15,874,Fruits
+197,Tuna,Gluten-free tuna hand-picked.,3.77,762,Seafood
+198,Lamb Chops,Locally sourced lamb chops no added sugar.,1.08,2054,Meat
+199,Salt,Fresh salt with natural ingredients.,3.39,1906,Pantry
+200,Cake,Delicious cake with natural ingredients.,14.96,304,Bakery
+201,Strawberry,Low-fat strawberry no added sugar.,10.29,1954,Fruits
+202,Salmon,Premium salmon hand-picked.,5.77,2224,Seafood
+203,Octopus,Premium octopus with natural ingredients.,9.93,2658,Seafood
+204,Beef Steak,Imported beef steak packed with nutrients.,10.58,1307,Meat
+205,Frozen Peas,Low-fat frozen peas packed with nutrients.,19.08,580,Frozen
+206,Ice Cream,Low-fat ice cream with natural ingredients.,7.67,1009,Frozen
+207,Pepper,Delicious pepper hand-picked.,18.39,1952,Vegetables
+208,Banana,Fresh banana from local farms.,19.18,697,Fruits
+209,Lactose-Free Milk,Locally sourced lactose-free milk from local farms.,5.74,1760,Dairy
+210,Lemonade,Sugar-free lemonade hand-picked.,11.35,223,Beverages
+211,Iced Tea,Low-fat iced tea no added sugar.,4.2,1572,Beverages
+212,Sardines,Organic sardines no added sugar.,16.54,1103,Seafood
+213,Turkey,Imported turkey packed with nutrients.,17.31,202,Meat
+214,Pretzels,Locally sourced pretzels with natural ingredients.,8.55,1217,Snacks
+215,Pear,Imported pear with natural ingredients.,7.76,1898,Fruits
+216,Flour,Fresh flour from local farms.,19.75,819,Pantry
+217,Bacon,Delicious bacon hand-picked.,0.76,518,Meat
+218,Coffee,Fresh coffee no added sugar.,14.8,1579,Beverages
+219,Salt,Imported salt hand-picked.,6.79,2205,Pantry
+220,Broccoli,Fresh broccoli from local farms.,4.91,2950,Vegetables
+221,Lactose-Free Milk,Sugar-free lactose-free milk packed with nutrients.,19.37,2753,Dairy
+222,Iced Tea,Low-fat iced tea from local farms.,12.81,2890,Beverages
+223,Turkey,Premium turkey hand-picked.,0.79,1246,Meat
+224,Turkey,Imported turkey from local farms.,18.19,2191,Meat
+225,Frozen Corn,Gluten-free frozen corn packed with nutrients.,17.85,1611,Frozen
+226,Pasta,Gluten-free pasta from local farms.,14.92,215,Pantry
+227,Pepper,Organic pepper no added sugar.,6.48,2811,Vegetables
+228,Flour,Delicious flour no added sugar.,11.88,2280,Pantry
+229,Salmon,Low-fat salmon no added sugar.,15.55,1736,Seafood
+230,Mango,Low-fat mango hand-picked.,15.29,2185,Fruits
+231,Frozen Berries,Sugar-free frozen berries packed with nutrients.,6.19,1490,Frozen
+232,Turkey,Low-fat turkey from local farms.,18.92,743,Meat
+233,Sugar,Premium sugar with natural ingredients.,6.92,2667,Pantry
+234,Pepper,Fresh pepper hand-picked.,10.45,1964,Vegetables
+235,Donut,Gluten-free donut hand-picked.,11.0,733,Bakery
+236,Sardines,Gluten-free sardines no added sugar.,17.11,1448,Seafood
+237,Mussels,Gluten-free mussels from local farms.,19.33,427,Seafood
+238,Frozen Berries,Organic frozen berries with natural ingredients.,18.2,1614,Frozen
+239,Pineapple,Premium pineapple from local farms.,14.51,2429,Fruits
+240,Bun,Organic bun no added sugar.,15.29,2950,Bakery
+241,Strawberry,Delicious strawberry packed with nutrients.,4.75,2017,Fruits
+242,Frozen Pizza,Imported frozen pizza packed with nutrients.,14.92,2849,Frozen
+243,Mango,Delicious mango from local farms.,7.24,1857,Fruits
+244,Flour,Organic flour from local farms.,1.6,474,Pantry
+245,Bagel,Imported bagel packed with nutrients.,2.61,2669,Bakery
+246,Watermelon,Delicious watermelon packed with nutrients.,10.57,2126,Fruits
+247,Cucumber,Gluten-free cucumber from local farms.,7.4,548,Vegetables
+248,Rice Cakes,Premium rice cakes with natural ingredients.,2.18,1485,Snacks
+249,Beans,Organic beans no added sugar.,9.82,2243,Pantry
+250,Cereal,Premium cereal with natural ingredients.,2.64,1363,Pantry
+251,Sausage,Locally sourced sausage from local farms.,12.54,2588,Meat
+252,Lobster,Organic lobster with natural ingredients.,13.86,1303,Seafood
+253,Strawberry,Organic strawberry hand-picked.,5.04,991,Fruits
+254,Sardines,Imported sardines from local farms.,4.32,1675,Seafood
+255,Sour Cream,Low-fat sour cream packed with nutrients.,18.6,2452,Dairy
+256,Green Tea,Sugar-free green tea with natural ingredients.,17.98,140,Beverages
+257,Kiwi,Gluten-free kiwi no added sugar.,16.79,312,Fruits
+258,Onion,Gluten-free onion no added sugar.,15.29,1739,Vegetables
+259,Fruit Snacks,Premium fruit snacks packed with nutrients.,3.61,2556,Snacks
+260,Pear,Delicious pear no added sugar.,17.98,672,Fruits
+261,Greek Yogurt,Imported greek yogurt no added sugar.,12.99,1946,Dairy
+262,Energy Drink,Organic energy drink with natural ingredients.,14.38,2902,Beverages
+263,Sour Cream,Low-fat sour cream packed with nutrients.,4.94,221,Dairy
+264,Soda,Sugar-free soda hand-picked.,11.69,1770,Beverages
+265,Orange Juice,Low-fat orange juice from local farms.,16.04,1197,Beverages
+266,Milk,Fresh milk with natural ingredients.,7.92,2703,Dairy
+267,Frozen Berries,Organic frozen berries packed with nutrients.,10.64,1686,Frozen
+268,Iced Tea,Delicious iced tea hand-picked.,12.39,1636,Beverages
+269,Lamb Chops,Locally sourced lamb chops no added sugar.,3.46,322,Meat
+270,Chips,Delicious chips with natural ingredients.,4.27,713,Snacks
+271,Crackers,Locally sourced crackers with natural ingredients.,15.86,1479,Snacks
+272,Orange Juice,Imported orange juice hand-picked.,18.92,1632,Beverages
+273,Strawberry,Sugar-free strawberry with natural ingredients.,7.62,739,Fruits
+274,Cereal,Gluten-free cereal hand-picked.,15.36,1142,Pantry
+275,Beans,Premium beans hand-picked.,8.66,2632,Pantry
+276,Pie,Organic pie with natural ingredients.,2.73,949,Bakery
+277,Grapes,Low-fat grapes hand-picked.,12.7,2095,Fruits
+278,Granola Bar,Gluten-free granola bar hand-picked.,15.16,1121,Snacks
+279,Ham,Premium ham with natural ingredients.,11.05,2072,Meat
+280,Sausage,Sugar-free sausage with natural ingredients.,10.18,2932,Meat
+281,Strawberry,Fresh strawberry hand-picked.,11.76,868,Fruits
+282,Salmon,Imported salmon hand-picked.,16.17,159,Seafood
+283,Chicken Breast,Locally sourced chicken breast packed with nutrients.,14.34,1714,Meat
+284,Garlic,Low-fat garlic with natural ingredients.,17.1,1311,Vegetables
+285,Olive Oil,Locally sourced olive oil hand-picked.,17.84,2127,Pantry
+286,Ground Beef,Fresh ground beef with natural ingredients.,2.87,600,Meat
+287,Beans,Low-fat beans no added sugar.,8.72,661,Pantry
+288,Apple,Delicious apple with natural ingredients.,5.58,2791,Fruits
+289,Chips,Imported chips packed with nutrients.,7.31,1121,Snacks
+290,Pie,Imported pie from local farms.,19.62,660,Bakery
+291,Crab,Sugar-free crab packed with nutrients.,12.44,742,Seafood
+292,Lobster,Organic lobster no added sugar.,10.01,1183,Seafood
+293,Zucchini,Organic zucchini with natural ingredients.,16.24,279,Vegetables
+294,Nuts,Organic nuts packed with nutrients.,8.08,514,Snacks
+295,Cottage Cheese,Fresh cottage cheese hand-picked.,2.69,537,Dairy
+296,Cereal,Premium cereal from local farms.,17.9,2008,Pantry
+297,Donut,Locally sourced donut packed with nutrients.,7.09,1017,Bakery
+298,Popcorn,Gluten-free popcorn from local farms.,19.34,1536,Snacks
+299,Baguette,Gluten-free baguette no added sugar.,5.67,1369,Bakery
+300,Sour Cream,Low-fat sour cream no added sugar.,9.21,2470,Dairy
+301,Crackers,Locally sourced crackers with natural ingredients.,19.82,1343,Snacks
+302,Cheese,Low-fat cheese no added sugar.,12.11,215,Dairy
+303,Yogurt,Locally sourced yogurt from local farms.,4.43,2242,Dairy
+304,Cereal,Delicious cereal hand-picked.,10.0,1377,Pantry
+305,Milk,Premium milk packed with nutrients.,18.61,814,Dairy
+306,Granola Bar,Delicious granola bar from local farms.,15.1,2027,Snacks
+307,Greek Yogurt,Locally sourced greek yogurt from local farms.,19.17,2458,Dairy
+308,Rice Cakes,Imported rice cakes hand-picked.,5.79,2597,Snacks
+309,Pineapple,Premium pineapple from local farms.,0.82,762,Fruits
+310,Muffin,Locally sourced muffin with natural ingredients.,2.97,313,Bakery
+311,Cream,Sugar-free cream from local farms.,14.65,1188,Dairy
+312,Olive Oil,Delicious olive oil packed with nutrients.,15.41,2872,Pantry
+313,Watermelon,Fresh watermelon from local farms.,17.3,358,Fruits
+314,Frozen Berries,Organic frozen berries hand-picked.,12.29,2141,Frozen
+315,Granola Bar,Locally sourced granola bar no added sugar.,19.48,1281,Snacks
+316,Frozen Nuggets,Imported frozen nuggets no added sugar.,5.8,215,Frozen
+317,Pork Chops,Organic pork chops with natural ingredients.,13.63,207,Meat
+318,Orange Juice,Low-fat orange juice with natural ingredients.,19.79,1020,Beverages
+319,Beef Steak,Gluten-free beef steak packed with nutrients.,13.12,728,Meat
+320,Pasta,Organic pasta hand-picked.,9.52,2224,Pantry
+321,Crab,Premium crab hand-picked.,6.51,2825,Seafood
+322,Lettuce,Locally sourced lettuce no added sugar.,1.52,1546,Vegetables
+323,Tuna,Low-fat tuna packed with nutrients.,6.0,2485,Seafood
+324,Bacon,Gluten-free bacon no added sugar.,13.0,792,Meat
+325,Cake,Locally sourced cake hand-picked.,6.28,576,Bakery
+326,Lactose-Free Milk,Organic lactose-free milk packed with nutrients.,14.58,1232,Dairy
+327,Pie,Low-fat pie no added sugar.,10.4,2667,Bakery
+328,Tuna,Sugar-free tuna hand-picked.,19.83,450,Seafood
+329,Pork Chops,Low-fat pork chops with natural ingredients.,4.75,2582,Meat
+330,Banana,Delicious banana no added sugar.,15.11,882,Fruits
+331,Frozen Fries,Gluten-free frozen fries with natural ingredients.,10.46,175,Frozen
+332,Green Tea,Imported green tea from local farms.,3.47,544,Beverages
+333,Mango,Sugar-free mango hand-picked.,3.25,617,Fruits
+334,Zucchini,Sugar-free zucchini no added sugar.,11.54,811,Vegetables
+335,Frozen Corn,Sugar-free frozen corn no added sugar.,0.5,2773,Frozen
+336,Garlic,Low-fat garlic with natural ingredients.,13.14,2796,Vegetables
+337,Smoothie,Imported smoothie hand-picked.,5.38,628,Beverages
+338,Octopus,Imported octopus packed with nutrients.,15.55,423,Seafood
+339,Iced Tea,Organic iced tea from local farms.,14.73,866,Beverages
+340,Watermelon,Delicious watermelon from local farms.,10.48,2233,Fruits
+341,Frozen Fries,Low-fat frozen fries with natural ingredients.,14.95,1670,Frozen
+342,Shrimp,Delicious shrimp with natural ingredients.,1.53,2716,Seafood
+343,Pasta,Organic pasta no added sugar.,16.4,1817,Pantry
+344,Onion,Imported onion hand-picked.,7.26,1944,Vegetables
+345,Kiwi,Gluten-free kiwi with natural ingredients.,6.79,1219,Fruits
+346,Bacon,Organic bacon from local farms.,5.32,364,Meat
+347,Orange Juice,Gluten-free orange juice no added sugar.,17.0,2664,Beverages
+348,Cream,Delicious cream packed with nutrients.,3.16,492,Dairy
+349,Cake,Organic cake with natural ingredients.,12.32,2338,Bakery
+350,Salt,Premium salt from local farms.,9.52,1928,Pantry
+351,Popcorn,Locally sourced popcorn no added sugar.,17.44,1767,Snacks
+352,Vinegar,Imported vinegar from local farms.,9.13,2113,Pantry
+353,Frozen Nuggets,Delicious frozen nuggets packed with nutrients.,19.98,2086,Frozen
+354,Pretzels,Sugar-free pretzels from local farms.,5.25,1988,Snacks
+355,Rice,Premium rice with natural ingredients.,11.03,1038,Pantry
+356,Grapes,Gluten-free grapes hand-picked.,13.29,849,Fruits
+357,Rice Cakes,Organic rice cakes no added sugar.,9.32,2344,Snacks
+358,Frozen Nuggets,Delicious frozen nuggets no added sugar.,3.77,1489,Frozen
+359,Spinach,Gluten-free spinach packed with nutrients.,9.94,624,Vegetables
+360,Cheese,Delicious cheese packed with nutrients.,15.54,1924,Dairy
+361,Turkey,Low-fat turkey packed with nutrients.,6.2,1272,Meat
+362,Roll,Fresh roll with natural ingredients.,5.05,383,Bakery
+363,Bacon,Low-fat bacon packed with nutrients.,11.98,424,Meat
+364,Iced Tea,Sugar-free iced tea hand-picked.,11.72,2063,Beverages
+365,Carrot,Delicious carrot hand-picked.,11.93,967,Vegetables
+366,Bun,Organic bun with natural ingredients.,8.77,1886,Bakery
+367,Coffee,Gluten-free coffee from local farms.,8.77,1484,Beverages
+368,Apple,Delicious apple from local farms.,2.97,1820,Fruits
+369,Kiwi,Sugar-free kiwi from local farms.,3.84,191,Fruits
+370,Broccoli,Fresh broccoli no added sugar.,16.33,1482,Vegetables
+371,Flour,Low-fat flour hand-picked.,1.53,2995,Pantry
+372,Frozen Berries,Imported frozen berries from local farms.,4.08,2361,Frozen
+373,Frozen Berries,Fresh frozen berries no added sugar.,5.99,2074,Frozen
+374,Chips,Fresh chips hand-picked.,0.88,579,Snacks
+375,Olive Oil,Organic olive oil packed with nutrients.,8.12,135,Pantry
+376,Yogurt,Imported yogurt hand-picked.,9.35,2590,Dairy
+377,Garlic,Fresh garlic no added sugar.,10.1,2915,Vegetables
+378,Cod,Locally sourced cod with natural ingredients.,17.9,1204,Seafood
+379,Croissant,Premium croissant from local farms.,9.16,2511,Bakery
+380,Baguette,Organic baguette hand-picked.,3.7,474,Bakery
+381,Pepper,Organic pepper with natural ingredients.,19.68,1173,Vegetables
+382,Soda,Gluten-free soda hand-picked.,6.32,2519,Beverages
+383,Cream,Delicious cream hand-picked.,16.16,2547,Dairy
+384,Donut,Delicious donut with natural ingredients.,7.87,1907,Bakery
+385,Spices,Sugar-free spices no added sugar.,9.88,1641,Pantry
+386,Turkey,Fresh turkey packed with nutrients.,11.56,1805,Meat
+387,Smoothie,Organic smoothie hand-picked.,19.55,161,Beverages
+388,Cucumber,Fresh cucumber no added sugar.,17.02,2752,Vegetables
+389,Sardines,Imported sardines no added sugar.,2.7,148,Seafood
+390,Croissant,Delicious croissant packed with nutrients.,6.65,1672,Bakery
+391,Ice Cream,Sugar-free ice cream hand-picked.,6.22,1056,Frozen
+392,Popcorn,Low-fat popcorn with natural ingredients.,10.5,2500,Snacks
+393,Mussels,Delicious mussels from local farms.,10.83,212,Seafood
+394,Trail Mix,Low-fat trail mix with natural ingredients.,10.4,2885,Snacks
+395,Ice Cream,Organic ice cream no added sugar.,13.46,1776,Frozen
+396,Muffin,Delicious muffin hand-picked.,12.42,148,Bakery
+397,Grapes,Premium grapes hand-picked.,17.33,1386,Fruits
+398,Milk,Fresh milk with natural ingredients.,2.9,532,Dairy
+399,Banana,Delicious banana with natural ingredients.,16.3,2614,Fruits
+400,Bread,Premium bread with natural ingredients.,13.87,2459,Bakery
+401,Pasta,Imported pasta from local farms.,6.14,199,Pantry
+402,Yogurt,Sugar-free yogurt hand-picked.,2.63,2715,Dairy
+403,Croissant,Imported croissant packed with nutrients.,4.59,2984,Bakery
+404,Beans,Gluten-free beans with natural ingredients.,10.02,261,Pantry
+405,Pineapple,Locally sourced pineapple from local farms.,2.08,1769,Fruits
+406,Yogurt,Fresh yogurt packed with nutrients.,13.65,107,Dairy
+407,Ham,Fresh ham packed with nutrients.,19.8,1864,Meat
+408,Mineral Water,Locally sourced mineral water with natural ingredients.,8.55,1738,Beverages
+409,Frozen Corn,Fresh frozen corn hand-picked.,9.59,2444,Frozen
+410,Rice Cakes,Locally sourced rice cakes hand-picked.,11.03,1831,Snacks
+411,Turkey,Gluten-free turkey with natural ingredients.,19.2,2432,Meat
+412,Greek Yogurt,Low-fat greek yogurt from local farms.,18.96,440,Dairy
+413,Butter,Sugar-free butter hand-picked.,14.83,1955,Dairy
+414,Energy Drink,Organic energy drink no added sugar.,14.24,2960,Beverages
+415,Tuna,Delicious tuna no added sugar.,3.13,2804,Seafood
+416,Sugar,Organic sugar from local farms.,9.08,1944,Pantry
+417,Chips,Premium chips hand-picked.,9.32,570,Snacks
+418,Olive Oil,Imported olive oil no added sugar.,3.94,327,Pantry
+419,Pineapple,Gluten-free pineapple from local farms.,10.62,2026,Fruits
+420,Sardines,Imported sardines packed with nutrients.,19.98,1912,Seafood
+421,Pineapple,Premium pineapple hand-picked.,3.28,2449,Fruits
+422,Frozen Nuggets,Delicious frozen nuggets from local farms.,16.69,2996,Frozen
+423,Onion,Premium onion with natural ingredients.,15.24,382,Vegetables
+424,Mango,Delicious mango from local farms.,5.76,1125,Fruits
+425,Nuts,Delicious nuts packed with nutrients.,9.82,1169,Snacks
+426,Shrimp,Imported shrimp no added sugar.,3.91,2921,Seafood
+427,Mussels,Delicious mussels no added sugar.,14.83,1193,Seafood
+428,Greek Yogurt,Imported greek yogurt from local farms.,17.59,657,Dairy
+429,Coffee,Low-fat coffee from local farms.,15.96,771,Beverages
+430,Crab,Gluten-free crab packed with nutrients.,6.23,2359,Seafood
+431,Frozen Corn,Premium frozen corn packed with nutrients.,7.11,986,Frozen
+432,Pretzels,Low-fat pretzels hand-picked.,16.33,700,Snacks
+433,Sardines,Low-fat sardines with natural ingredients.,16.82,1723,Seafood
+434,Trail Mix,Sugar-free trail mix no added sugar.,10.42,1929,Snacks
+435,Yogurt,Organic yogurt hand-picked.,7.77,1202,Dairy
+436,Banana,Fresh banana packed with nutrients.,2.79,980,Fruits
+437,Salmon,Low-fat salmon from local farms.,5.24,1962,Seafood
+438,Muffin,Sugar-free muffin no added sugar.,15.27,2286,Bakery
+439,Milk,Imported milk hand-picked.,10.56,768,Dairy
+440,Frozen Pizza,Low-fat frozen pizza from local farms.,5.09,1538,Frozen
+441,Pepper,Organic pepper hand-picked.,7.48,2308,Vegetables
+442,Yogurt,Low-fat yogurt hand-picked.,17.62,2511,Dairy
+443,Lactose-Free Milk,Delicious lactose-free milk from local farms.,18.02,643,Dairy
+444,Frozen Fries,Locally sourced frozen fries from local farms.,10.04,2437,Frozen
+445,Pork Chops,Delicious pork chops hand-picked.,15.73,1931,Meat
+446,Baguette,Gluten-free baguette hand-picked.,5.46,2026,Bakery
+447,Cake,Fresh cake hand-picked.,13.56,2511,Bakery
+448,Apple,Premium apple hand-picked.,1.7,368,Fruits
+449,Pineapple,Low-fat pineapple packed with nutrients.,12.21,1914,Fruits
+450,Crackers,Sugar-free crackers hand-picked.,3.57,1358,Snacks
+451,Tomato,Gluten-free tomato from local farms.,11.42,1495,Vegetables
+452,Pretzels,Organic pretzels hand-picked.,9.93,2242,Snacks
+453,Pie,Locally sourced pie with natural ingredients.,9.12,192,Bakery
+454,Garlic,Fresh garlic with natural ingredients.,16.22,1443,Vegetables
+455,Soda,Fresh soda no added sugar.,7.82,130,Beverages
+456,Frozen Corn,Delicious frozen corn no added sugar.,3.8,1640,Frozen
+457,Broccoli,Imported broccoli hand-picked.,9.99,2790,Vegetables
+458,Cake,Fresh cake with natural ingredients.,5.68,1543,Bakery
+459,Frozen Peas,Fresh frozen peas no added sugar.,16.84,1415,Frozen
+460,Octopus,Fresh octopus no added sugar.,8.81,2260,Seafood
+461,Tuna,Imported tuna no added sugar.,12.08,1248,Seafood
+462,Vinegar,Organic vinegar packed with nutrients.,3.73,122,Pantry
+463,Granola Bar,Premium granola bar packed with nutrients.,16.63,1232,Snacks
+464,Nuts,Delicious nuts packed with nutrients.,13.83,2236,Snacks
+465,Pie,Sugar-free pie from local farms.,3.92,501,Bakery
+466,Spices,Fresh spices no added sugar.,6.99,2440,Pantry
+467,Lobster,Delicious lobster hand-picked.,14.46,2159,Seafood
+468,Pasta,Gluten-free pasta hand-picked.,15.97,270,Pantry
+469,Frozen Nuggets,Organic frozen nuggets with natural ingredients.,18.19,2387,Frozen
+470,Salmon,Low-fat salmon packed with nutrients.,11.91,2605,Seafood
+471,Olive Oil,Imported olive oil hand-picked.,16.52,517,Pantry
+472,Crackers,Delicious crackers hand-picked.,18.31,1031,Snacks
+473,Watermelon,Fresh watermelon packed with nutrients.,16.31,2684,Fruits
+474,Frozen Pizza,Premium frozen pizza with natural ingredients.,12.11,461,Frozen
+475,Milk,Delicious milk with natural ingredients.,2.15,1772,Dairy
+476,Sugar,Locally sourced sugar hand-picked.,11.24,504,Pantry
+477,Grapes,Gluten-free grapes packed with nutrients.,14.38,325,Fruits
+478,Carrot,Premium carrot packed with nutrients.,7.56,2718,Vegetables
+479,Granola Bar,Fresh granola bar from local farms.,1.58,771,Snacks
+480,Tomato,Delicious tomato from local farms.,18.63,292,Vegetables
+481,Beef Steak,Locally sourced beef steak from local farms.,16.32,2750,Meat
+482,Broccoli,Low-fat broccoli packed with nutrients.,10.31,1347,Vegetables
+483,Coffee,Premium coffee from local farms.,14.15,256,Beverages
+484,Chicken Breast,Sugar-free chicken breast hand-picked.,1.3,1560,Meat
+485,Turkey,Fresh turkey no added sugar.,17.49,2223,Meat
+486,Trail Mix,Gluten-free trail mix from local farms.,7.44,2895,Snacks
+487,Butter,Low-fat butter hand-picked.,7.53,748,Dairy
+488,Cheese,Gluten-free cheese with natural ingredients.,13.87,1778,Dairy
+489,Lamb Chops,Gluten-free lamb chops with natural ingredients.,12.13,1776,Meat
+490,Onion,Organic onion no added sugar.,2.4,1072,Vegetables
+491,Rice,Organic rice from local farms.,2.33,1101,Pantry
+492,Lobster,Delicious lobster packed with nutrients.,2.29,1744,Seafood
+493,Rice Cakes,Fresh rice cakes packed with nutrients.,0.7,740,Snacks
+494,Trail Mix,Premium trail mix with natural ingredients.,1.23,2584,Snacks
+495,Sausage,Gluten-free sausage with natural ingredients.,3.78,2538,Meat
+496,Garlic,Premium garlic from local farms.,11.77,2599,Vegetables
+497,Frozen Berries,Delicious frozen berries from local farms.,2.12,2622,Frozen
+498,Frozen Pizza,Low-fat frozen pizza with natural ingredients.,3.22,2043,Frozen
+499,Banana,Gluten-free banana no added sugar.,13.46,1920,Fruits
+500,Energy Drink,Fresh energy drink no added sugar.,9.77,1579,Beverages
