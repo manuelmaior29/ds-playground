@@ -5,15 +5,16 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 from langgraph.graph import StateGraph
 from langchain_ollama import ChatOllama
-from langchain_community.tools import (
-    DuckDuckGoSearchRun
-)
-
-from utils import (
-    get_question
-)
+from langchain_openai import ChatOpenAI
 from tools import (
     search_wikipedia,
+    search_arxiv,
+    search_web,
+    add,
+    subtract,
+    multiply,
+    divide,
+    modulus,
     get_unreversed_text
 )
 
@@ -39,11 +40,19 @@ def build_graph():
     
     tools = [
         search_wikipedia,
-        get_unreversed_text,
-        DuckDuckGoSearchRun()
+        search_arxiv,
+        search_web,
+        add,
+        subtract,
+        multiply,
+        divide,
+        modulus,
+        get_unreversed_text
     ]
     
-    llm = ChatOllama(model="qwen3:8b", verbose=True)
+    llm = ChatOpenAI(
+        model="mistral-small-2506", 
+        verbose=True)
     llm_with_tools = llm.bind_tools(tools)
 
     graph = StateGraph(state_schema=AgentState)
@@ -70,18 +79,9 @@ class BasicAgent:
             for message in messages['messages']:
                 message.pretty_print()
         answer = messages['messages'][-1].content
-        return answer[14:]
+        return answer
 
 if __name__ == "__main__": 
-    tools = [
-        search_wikipedia,
-        get_unreversed_text,
-        DuckDuckGoSearchRun()
-    ]
-    
-    llm = ChatOllama(model="qwen3:8b", verbose=True)
-    llm_with_tools = llm.bind_tools(tools)
-
     try:
         system_prompt = ""
         with open("system_prompt.txt", "r") as f:
@@ -98,3 +98,5 @@ if __name__ == "__main__":
             break
         
         response = agent(question=user_input, verbose=True)
+        print("================================== Ai Final Answer ==================================\n")
+        print(response)
