@@ -1,0 +1,6 @@
+model_list:
+  - model_name: local-gemma
+    litellm_params:
+      model: ollama/gemma3:1b
+      api_base: http://host.docker.internal:11434
+      api_key: "NULL"  

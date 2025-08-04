@@ -1,0 +1,20 @@
+[project]
+name = "litellm-basic-proxy"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "manuelmaior.29",email = "manuelmaior.29@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "litellm[proxy] (>=1.74.15.post1,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "litellm_basic_proxy", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
