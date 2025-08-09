@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: litellm_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: litellm_user
+      POSTGRES_PASSWORD: litellm_password
+      POSTGRES_DB: litellm_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    container_name: litellm_server
+    ports:
+      - "4000:4000"
+    environment:
+      DATABASE_URL: postgres://litellm_user:litellm_password@postgres:5432/litellm_db
+    volumes:
+      - ./litellm_config.yaml:/app/config.yaml
+    command: ["--config", "/app/config.yaml", "--detailed_debug"]
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - ollama
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama_server
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+
+volumes:
+  pgdata:
